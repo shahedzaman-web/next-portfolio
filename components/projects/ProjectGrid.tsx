@@ -1,6 +1,5 @@
 "use client";
 
-import { AdmissionAssistCover } from "@/assets/ImagePath";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,44 +8,6 @@ import { motion } from "framer-motion";
 import { AppleIcon, PlayIcon } from "lucide-react";
 import Image from "next/image";
 
-const projects = [
-  {
-    id: 2,
-    title: "Admissions Assist",
-    description: "Admissions Assist is a comprehensive mobile application that simplifies the college admissions process. It provides students with resources and tools to research colleges, track application deadlines, and submit applications.",
-    image: AdmissionAssistCover,  // Replace with the actual image link
-    links: {
-      apple: "https://apps.apple.com/us/app/admissions-assist/id6478013507",
-      play: "https://play.google.com/store/apps/details?id=com.admissionsassist",
-    },
-    link: "https://play.google.com/store/apps/details?id=com.admissionsassist",
-    github: "https://github.com/developer/admissions-assist", // Hypothetical link
-    live: "https://play.google.com/store/apps/details?id=com.admissionsassist",
-    tags: ["Android", "Education", "Admissions", "College", "Tracking"]
-  },
-  {
-    title: "E-commerce Platform",
-    description: "Full-featured mobile shopping experience with AR product visualization.",
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80",
-    tags: ["React Native", "TypeScript", "Stripe", "AR Kit"],
-    category: "ecommerce",
-    links: {
-      github: "https://github.com/username/shop-app",
-      live: "https://play.google.com/store/apps/shop"
-    }
-  },
-  {
-    title: "Social Media App",
-    description: "Real-time social networking platform with video streaming capabilities.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-    tags: ["React Native", "WebRTC", "Socket.io", "AWS"],
-    category: "social",
-    links: {
-      github: "https://github.com/username/social-app",
-      live: "https://apps.apple.com/app/social"
-    }
-  }
-];
 
 export default function ProjectGrid() {
 
