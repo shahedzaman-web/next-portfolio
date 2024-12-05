@@ -2,12 +2,13 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
+import projectConstants from '@/constants';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'React Native Developer Portfolio',
-  description: 'Professional portfolio showcasing React Native development expertise',
+  title: projectConstants.name,
+  description: projectConstants.title,	
 };
 
 export default function RootLayout({
