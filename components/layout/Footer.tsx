@@ -58,7 +58,7 @@ export default function Footer() {
               </Button>
 
               <Button
-                onClick={() => window.location = `mailto:${projectConstants.email}`}
+                onClick={() => window.location.href = `mailto:${projectConstants.email}`}
                 variant="ghost" size="icon">
                 <Mail className="h-5 w-5" />
               </Button>
