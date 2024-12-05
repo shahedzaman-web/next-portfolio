@@ -1,11 +1,11 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import projectConstants from "@/constants";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 
 

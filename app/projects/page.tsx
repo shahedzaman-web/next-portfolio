@@ -1,13 +1,11 @@
 "use client";
 
 import { FadeIn } from "@/components/animations/FadeIn";
-import ProjectGrid from "@/components/projects/ProjectGrid";
-import ProjectFilters from "@/components/projects/ProjectFilters";
-import { useState } from "react";
 import Footer from "@/components/layout/Footer";
+import ProjectGrid from "@/components/projects/ProjectGrid";
 
 export default function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = useState<string>("all");
+
 
   return (
     <main className="min-h-screen bg-black">
@@ -19,7 +17,7 @@ export default function ProjectsPage() {
             in React Native development and cross-platform solutions.
           </p>
         </FadeIn>
-        
+
         {/* <FadeIn delay={0.2}>
           <ProjectFilters activeFilter={activeFilter} onFilterChange={setActiveFilter} />
         </FadeIn> */}
