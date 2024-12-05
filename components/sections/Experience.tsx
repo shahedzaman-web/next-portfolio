@@ -35,14 +35,17 @@ export default function Experience() {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4 group-hover:text-foreground/90 transition-colors">{exp.description}</p>
-                  <ul className="gap-3 flex flex-row items-center">
+                  <div className="flex flex-wrap gap-2">
                     {exp?.tags?.map((tag, i) => (
-                      <Badge variant="secondary" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors" key={i}>
+                        <Badge
+                        key={i}
+                        variant="secondary"
+                        className="transition-colors hover:bg-primary hover:text-primary-foreground"
+                      >
                         {tag}
                       </Badge>
-
                     ))}
-                  </ul>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
