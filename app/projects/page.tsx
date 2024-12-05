@@ -20,12 +20,12 @@ export default function ProjectsPage() {
           </p>
         </FadeIn>
         
-        <FadeIn delay={0.2}>
+        {/* <FadeIn delay={0.2}>
           <ProjectFilters activeFilter={activeFilter} onFilterChange={setActiveFilter} />
-        </FadeIn>
+        </FadeIn> */}
 
         <FadeIn delay={0.4}>
-          <ProjectGrid filter={activeFilter} />
+          <ProjectGrid />
         </FadeIn>
       </div>
       <Footer />

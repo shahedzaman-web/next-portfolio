@@ -1,22 +1,28 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { AdmissionAssistCover } from "@/assets/ImagePath";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import projectConstants from "@/constants";
 import { motion } from "framer-motion";
+import { AppleIcon, PlayIcon } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
   {
-    title: "Health & Fitness App",
-    description: "A comprehensive fitness tracking application with real-time workout monitoring and social features.",
-    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80",
-    tags: ["React Native", "Redux", "Firebase", "Maps"],
-    category: "fitness",
+    id: 2,
+    title: "Admissions Assist",
+    description: "Admissions Assist is a comprehensive mobile application that simplifies the college admissions process. It provides students with resources and tools to research colleges, track application deadlines, and submit applications.",
+    image: AdmissionAssistCover,  // Replace with the actual image link
     links: {
-      github: "https://github.com/username/fitness-app",
-      live: "https://apps.apple.com/app/fitness"
-    }
+      apple: "https://apps.apple.com/us/app/admissions-assist/id6478013507",
+      play: "https://play.google.com/store/apps/details?id=com.admissionsassist",
+    },
+    link: "https://play.google.com/store/apps/details?id=com.admissionsassist",
+    github: "https://github.com/developer/admissions-assist", // Hypothetical link
+    live: "https://play.google.com/store/apps/details?id=com.admissionsassist",
+    tags: ["Android", "Education", "Admissions", "College", "Tracking"]
   },
   {
     title: "E-commerce Platform",
@@ -42,14 +48,12 @@ const projects = [
   }
 ];
 
-export default function ProjectGrid({ filter = "all" }) {
-  const filteredProjects = filter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+export default function ProjectGrid() {
+
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-      {filteredProjects.map((project, index) => (
+      {projectConstants.projectList.map((project, index) => (
         <motion.div
           key={project.title}
           initial={{ opacity: 0, y: 20 }}
@@ -57,10 +61,12 @@ export default function ProjectGrid({ filter = "all" }) {
           transition={{ delay: index * 0.1 }}
         >
           <Card className="overflow-hidden h-full flex flex-col">
-            <img 
-              src={project.image} 
-              alt={project.title} 
-              className="w-full h-48 object-cover"
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={500}
+              height={500}
+              className="w-full h-48 object-cover "
             />
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
@@ -73,13 +79,17 @@ export default function ProjectGrid({ filter = "all" }) {
                 ))}
               </div>
               <div className="flex gap-4">
-                <Button variant="outline" size="sm">
-                  <Github className="mr-2 h-4 w-4" />
-                  Code
+                <Button
+                  onClick={() => window.open(project?.links?.play, "_blank")}
+                  variant="outline" size="sm">
+                  <PlayIcon className="mr-2 h-4 w-4" />
+                  Play Store
                 </Button>
-                <Button variant="outline" size="sm">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  Live Demo
+                <Button
+                  onClick={() => window.open(project?.links?.apple, "_blank")}
+                  variant="outline" size="sm">
+                  <AppleIcon className="mr-2 h-4 w-4" />
+                  App Store
                 </Button>
               </div>
             </CardContent>
