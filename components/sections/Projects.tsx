@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import projectConstants from "@/constants";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { AppleIcon, ExternalLink, Github, PlayIcon } from "lucide-react";
 import Image from "next/image";
 
 
@@ -32,14 +32,18 @@ export default function Projects() {
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="flex gap-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <Button variant="secondary" size="sm">
-                        <Github className="mr-2 h-4 w-4" />
-                        View Code
-                      </Button>
-                      <Button variant="secondary" size="sm">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </Button>
+                      {project?.links?.play && <Button
+                        onClick={() => window.open(project?.links?.play, "_blank")}
+                        variant="outline" size="sm">
+                        <PlayIcon className="mr-2 h-4 w-4" />
+                        Play Store
+                      </Button>}
+                      {project?.links?.apple && <Button
+                        onClick={() => window.open(project?.links?.apple, "_blank")}
+                        variant="outline" size="sm">
+                        <AppleIcon className="mr-2 h-4 w-4" />
+                        App Store
+                      </Button>}
                     </div>
                   </div>
                 </div>

@@ -20,6 +20,7 @@ export default function ProjectGrid() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1 }}
+          whileHover={{ scale: 1.01 }}
         >
           <Card className="overflow-hidden h-full flex flex-col">
             <Image
@@ -40,18 +41,18 @@ export default function ProjectGrid() {
                 ))}
               </div>
               <div className="flex gap-4">
-                <Button
+                {project?.links?.play && <Button
                   onClick={() => window.open(project?.links?.play, "_blank")}
                   variant="outline" size="sm">
                   <PlayIcon className="mr-2 h-4 w-4" />
                   Play Store
-                </Button>
-                <Button
+                </Button>}
+                {project?.links?.apple && <Button
                   onClick={() => window.open(project?.links?.apple, "_blank")}
                   variant="outline" size="sm">
                   <AppleIcon className="mr-2 h-4 w-4" />
                   App Store
-                </Button>
+                </Button>}
               </div>
             </CardContent>
           </Card>
