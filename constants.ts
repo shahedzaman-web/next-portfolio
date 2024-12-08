@@ -13,17 +13,14 @@ const projectConstants = {
     whatsapp: "https://wa.me/8801786233560",
     featuredProjects: [
         {
-            id: 1,
-            title: "Admissions Assist",
-            description: "Admissions Assist is a comprehensive mobile application that simplifies the college admissions process. It provides students with resources and tools to research colleges, track application deadlines, and submit applications.",
-            image: "https://images.unsplash.com/20/cambridge.JPG?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",  // Replace with the actual Unsplash image link
-            links: {
-                apple: "https://apps.apple.com/us/app/admissions-assist/id6478013507",
-                play: "https://play.google.com/store/apps/details?id=com.admissionsassist",
+            "id": 1,
+            "title": "Vella Laser Care",
+            "description": "Vella Laser Care is a comprehensive beauty and skincare app offering a range of laser treatments and skincare solutions. The app provides detailed information about various procedures, helps users book appointments, and offers tips for maintaining healthy skin.",
+            "image": "https://images.unsplash.com/photo-1602037299890-c593f4c81d47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "links": {
+                "play": "https://play.google.com/store/apps/details?id=com.vellalasercarebd"
             },
-            github: "https://github.com/developer/admissions-assist", // Hypothetical link
-            live: "https://play.google.com/store/apps/details?id=com.admissionsassist",
-            tags: ["Android", "Education", "Admissions", "College", "Tracking"]
+            "tags": ["Android", "Beauty", "Skincare", "Laser Treatments"]
         },
         {
             id: 2,
@@ -138,7 +135,18 @@ const projectConstants = {
                 play: "https://play.google.com/store/apps/details?id=com.sohojporaa",
             },
             tags: ["Android", "Education", "Learning", "Interactive"]
+        },
+        {
+            "id": 10,
+            "title": "Vella Laser Care",
+            "description": "Vella Laser Care is a comprehensive beauty and skincare app offering a range of laser treatments and skincare solutions. The app provides detailed information about various procedures, helps users book appointments, and offers tips for maintaining healthy skin.",
+            "image": "https://images.unsplash.com/photo-1602037299890-c593f4c81d47?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "links": {
+                "play": "https://play.google.com/store/apps/details?id=com.vellalasercarebd"
+            },
+            "tags": ["Android", "Beauty", "Skincare", "Laser Treatments"]
         }
+
     ]
     ,
     skills: [
